@@ -1,0 +1,218 @@
+*{
+  margin: 0;
+  padding: 0;  
+}
+.hero{
+height: 100vh;
+ background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/background.jpg);
+background-position:center ;
+background-size: cover;
+overflow: hidden;
+position: relative;
+}
+.navbar{
+    display: flex;
+    padding:40px  120px;
+}
+.nav-logo{
+    background-color: red;
+}
+.nav-logo img{
+width: 110px;
+
+}
+.nav-links{
+flex: 1;
+background: red;
+margin: auto;
+}
+.nav-links ul{
+    margin-left: 50px;
+    display: inline;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding:10px 8px ;
+}
+.nav-links ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background:yellow;
+    display: block;
+    margin:auto;
+    transition: .5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.btn{
+    padding:10px 20px;
+    border:0;
+    margin-top: 2px;
+    background:yellow;
+    font-weight:bold ;
+    cursor: pointer;
+    float: right;
+}
+.nav-links.btn{
+float: right;
+}
+.btn1{
+    padding:10px 20px;
+    border:0;
+    background:yellow;
+    font-weight:bold ;
+    cursor: pointer;
+}
+.banner-title{
+    margin: 80px 130px;
+    color:white;
+}
+.banner-title h1{
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+.banner-title h1 span{
+color:yellow;
+}
+.vertical{
+    height: 100%;
+    background:#000;
+    top:0;
+    left: 0;
+    position: absolute;
+}
+.search{
+height:60%;
+width: 80px;
+
+}
+.search .fa{
+    margin:45px 23px;
+    display: block;
+    color: white;
+    font-size:30px;
+    cursor: pointer;
+}
+.social{
+    height: 35%;
+    width: 80px;
+    background:yellow;
+    text-align: center;
+    padding-top: 27% ;
+    bottom: 0;
+    position: absolute;
+    display: block;
+}
+.social .fa{
+    margin: 15px 23px;
+    display: block;
+      padding: 8px;
+      border:1px solid #000;
+      border-radius:50% ;
+      cursor: pointer;
+}
+.notific{
+    display: flex;
+    width: 400px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background:yellow;
+    text-align: center;
+}
+.contents{
+    flex-basis:50% ;
+    padding: 10px;
+}
+.notific-img{
+    flex-basis:50% ;
+}
+.notific-img img{
+    width: 100%;
+}
+.contents a{
+    text-decoration: none;
+    color:black ;
+    font-size: 30px;
+    margin:0 13px;
+}
+.contents p{
+    text-align: right;
+    margin-top: 10px;
+
+}
+.dropdown{
+    display: none;
+}
+.dropdown ul li{
+    display: block;
+}
+.navbar .fa{
+    display: none;
+}
+@media screen and (max-width:1300px){
+    .vertical{
+        display: none;
+    }
+    .banner-title{
+        margin: 80px 40px;
+    }
+    .banner-title h1{
+     font-size: 50px;
+    }
+    .notific{
+   width: 100%;
+    }
+    .navbar{
+        padding:10px  30px;
+    }
+    .fa-bars{
+        position: absolute;
+        right:20px ;
+        top:10px;
+    }
+    .navbar .fa{
+        display: block;
+       background-color:white;
+        margin:10px  25px ;
+        font-size: 22px;
+        cursor:pointer;
+    }
+    .nav-links{
+        height: 100vh;
+        width: 200px;
+        background: black;
+        top:0;
+        right:-200px;
+        position: absolute;
+        text-align: left;
+        z-index: 2; 
+    }
+    .nav-links ul a{
+      display: block;
+        
+    }
+    .nav-links.btn{
+        float: none;
+        }
+        .btn{
+            float: none;
+            margin-left:25px ;
+            margin-top: 10px;
+        }
+        .nav-links ul li{
+            display: block;
+        }
+      
+}
+.nav-links:hover .dropdown{
+    display: block;
+}
